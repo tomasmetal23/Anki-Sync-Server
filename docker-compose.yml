@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  anki-sync-server:
+    build: .
+    environment:
+      - SYNC_USER1=tomas:123456
+      - SYNC_HOST=0.0.0.0
+      - SYNC_PORT=27701
+      - SYNC_BASE=/sync
+      - MAX_SYNC_PAYLOAD_MEGS=100
+    ports:
+      - "27701:27701"
+    volumes:
+      - anki-sync-data:/sync
+
+volumes:
+  anki-sync-data:
