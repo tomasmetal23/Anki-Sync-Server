@@ -1,4 +1,4 @@
-FROM python:3.10-slim-buster
+FROM python:3.11.11-slim-bookworm
 
 # Definimos las variables de entorno en el formato que deseas
 ENV SYNC_USER1=${SYNC_USER1}
